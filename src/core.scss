@@ -7,37 +7,39 @@ $phase6: #eeeeee;
 $purps: #b21aff;
 $pearlescent: #21ebff;
 $svgpurps: invert(36%) sepia(93%) saturate(6729%) hue-rotate(270deg)
-  brightness(104%) contrast(117%);
+	brightness(104%) contrast(117%);
 $svgpearlescent: invert(78%) sepia(71%) saturate(2265%) hue-rotate(123deg)
-  brightness(96%) contrast(94%);
+	brightness(96%) contrast(94%);
 
-$screenbreak720: 1300px;
-$screenbreak1080: 1800px;
-$screenbreak1440: 2500px;
+$screenbreak900: 900px;
+$screenbreak1800: 1800px;
+$screenbreak2400: 2400px;
 @font-face {
-  // https://www.fontspace.com/asher-punk-font-f55489
-  font-family: "AsherPunk";
-  src: URL("./AsherPunkDemoVersion-ALZJ2.ttf") format("truetype");
+	// https://www.fontspace.com/asher-punk-font-f55489
+	font-family: "AsherPunk";
+	src: URL("./AsherPunkDemoVersion-ALZJ2.ttf") format("truetype");
 }
-
+html {
+	scroll-behavior: smooth;
+}
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
 }
 a {
-  text-decoration: none;
-  color: $pearlescent;
+	text-decoration: none;
+	color: $pearlescent;
 }
 a:hover,
 a:focus {
-  color: $purps;
+	color: $purps;
 }
 body {
-  font-family: "Orbitron", sans-serif;
-  letter-spacing: 0.5px;
-  color: $phase6;
+	font-family: "Orbitron", sans-serif;
+	letter-spacing: 0.5px;
+	color: $phase6;
 }
 h1,
 h2,
@@ -45,463 +47,466 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Orbitron", sans-serif;
-  letter-spacing: 0;
+	font-family: "Orbitron", sans-serif;
+	letter-spacing: 0;
 }
 p {
-  font-family: "Roboto", sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 .logo {
-  color: $purps;
-  font-size: 4rem;
-  font-family: "AsherPunk", sans-serif;
-  margin-left: 2rem;
-  a,
-  h1 {
-    color: $purps;
-  }
-  .firstLetter {
-    color: $pearlescent;
-    font-size: 4.5rem;
-  }
+	color: $purps;
+	font-size: 4rem;
+	font-family: "AsherPunk", sans-serif;
+	margin-left: 2rem;
+	a,
+	h1 {
+		color: $purps;
+	}
+	.firstLetter {
+		color: $pearlescent;
+		font-size: 4.5rem;
+	}
 }
 
 .App {
-  background: $phase2;
-  z-index: -100;
-  overflow: hidden;
+	background: $phase2;
+	z-index: -100;
+	overflow: hidden;
 }
 .container {
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0.5rem;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0.5rem;
 }
 // Navbar Section
 
 .navbar {
-  background: $phase1;
-  color: $phase6;
+	background: $phase1;
+	color: $phase6;
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-  .dropDown {
-    background: $phase3;
-    font-size: 1.2rem;
+	.dropDown {
+		background: $phase3;
+		font-size: 1.2rem;
 
-    margin-right: 0.5rem;
-    width: 9rem;
-    text-align: center;
-    padding: 0.3rem 0;
-    border-radius: 5px;
-    position: relative;
-    &:hover,
-    .dropped {
-      color: $purps;
-    }
-    .dropItems {
-      position: absolute;
-      display: none;
-      background: $phase3;
-      width: 100%;
+		margin-right: 0.5rem;
+		width: 9rem;
+		text-align: center;
+		padding: 0.3rem 0;
+		border-radius: 5px;
+		position: relative;
+		&:hover,
+		&:focus {
+			color: $purps;
+		}
+		.dropItems {
+			position: absolute;
+			display: none;
+			background: $phase3;
+			width: 100%;
 
-      text-align: left;
-      padding: 1rem 0.5rem;
-      border-radius: 0 0 5px 5px;
-      li {
-        padding-top: 1rem;
-        line-height: 1.2rem;
-        border-bottom: 1px solid $phase4;
-        transition: all ease-in-out 0.1s;
+			text-align: left;
+			padding: 1rem 0.5rem;
+			border-radius: 0 0 5px 5px;
+			li {
+				padding-top: 1rem;
+				line-height: 1.2rem;
+				border-bottom: 1px solid $phase4;
+				transition: all ease-in-out 0.1s;
 
-        &:hover {
-          font-size: 1.3rem;
-        }
-      }
-    }
+				&:hover {
+					font-size: 1.3rem;
+				}
+			}
+		}
 
-    &:hover .dropItems,
-    .shownDropItems {
-      position: absolute;
-      display: block;
-      z-index: 999;
-    }
-  }
+		&:hover .dropItems,
+		.shownDropItems {
+			position: absolute;
+			display: block;
+			z-index: 999;
+		}
+	}
 
-  .navItems {
-    display: flex;
+	.navItems {
+		display: flex;
 
-    li {
-      margin: 0 2rem;
-      border-radius: 10px;
-      &:last-of-type {
-        margin-right: 3rem;
-      }
-    }
-  }
+		li {
+			margin: 0 2rem;
+			border-radius: 10px;
+			&:last-of-type {
+				margin-right: 3rem;
+			}
+		}
+	}
 }
 
 // End of Navbar
 // Start of Hero
 
 .hero {
-  min-height: 90vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  z-index: 2;
+	min-height: 90vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	z-index: 2;
 
-  .logo {
-    margin: 0;
-  }
-  .content {
-    margin-top: 18vh;
-    h1 {
-      font-size: 4.5rem;
-      position: relative;
-      &:before,
-      &:after {
-        color: $phase3;
-        opacity: 0.15;
-        font-weight: 900;
-        font-size: 10rem;
-        left: -2.25rem;
+	.logo {
+		margin: 0;
+	}
+	.content {
+		margin-top: 18vh;
+		h1 {
+			font-size: 4.5rem;
+			position: relative;
+			&:before,
+			&:after {
+				color: $phase3;
+				opacity: 0.15;
+				font-weight: 900;
+				font-size: 10rem;
+				left: -2.25rem;
 
-        position: absolute;
-        z-index: -1;
-      }
+				position: absolute;
+				z-index: -1;
+			}
 
-      &:before {
-        content: "Web";
-        top: -7rem;
-      }
-      &:after {
-        content: "Developer";
-        bottom: -15rem;
-      }
-    }
-    .firstLetter {
-      font-size: 6rem;
-    }
+			&:before {
+				content: "Web";
+				top: -7rem;
+			}
+			&:after {
+				content: "Developer";
+				bottom: -15rem;
+			}
+		}
+		.firstLetter {
+			font-size: 6rem;
+		}
 
-    p {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      color: $phase6;
-    }
-  }
-  .actionButtons {
-    margin-top: auto;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    letter-spacing: 0.2rem;
-    margin-top: 8rem;
+		p {
+			font-size: 1.5rem;
+			margin-top: 1rem;
+			color: $phase6;
+		}
+	}
+	.actionButtons {
+		margin-top: auto;
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		letter-spacing: 0.2rem;
+		margin-top: 8rem;
 
-    .btn {
-      color: $pearlescent;
-      position: relative;
-      cursor: pointer;
-      font-size: 1.3rem;
+		.btn {
+			color: $pearlescent;
+			position: relative;
+			cursor: pointer;
+			font-size: 1.3rem;
 
-      width: 35%;
-      max-width: 10rem;
-      padding: 0.5rem 0;
-      border: 1px solid $pearlescent;
-      transition: all ease-in-out 0.1s;
+			width: 35%;
+			max-width: 10rem;
+			padding: 0.5rem 0;
+			border: 1px solid $pearlescent;
+			transition: all ease-in-out 0.1s;
 
-      &:hover,
-      &:active {
-        border-color: $purps;
-        color: $purps;
-        box-shadow: rgba(178, 26, 255, 1) -1px -1px, -2px -2px,
-          rgba(178, 26, 255, 1) -3px -3px, rgba(178, 26, 255, 0.9) -4px -4px,
-          rgba(178, 26, 255, 0.8) -5px -5px, rgba(178, 26, 255, 0.7) -6px -6px,
-          rgba(178, 26, 255, 0.6) -7px -7px, rgba(178, 26, 255, 0.5) -8px -8px,
-          rgba(178, 26, 255, 0.4) -9px -9px, rgba(178, 26, 255, 0.3) -10px -10px,
-          rgba(178, 26, 255, 0.2) -11px -11px,
-          rgba(178, 26, 255, 0.1) -12px -12px;
-      }
-    }
-  }
-  .smallIndicator {
-    font-family: "Orbitron", sans-serif;
+			&:hover,
+			&:active {
+				border-color: $purps;
+				color: $purps;
+				box-shadow: rgba(178, 26, 255, 1) -1px -1px, -2px -2px,
+					rgba(178, 26, 255, 1) -3px -3px, rgba(178, 26, 255, 0.9) -4px -4px,
+					rgba(178, 26, 255, 0.8) -5px -5px, rgba(178, 26, 255, 0.7) -6px -6px,
+					rgba(178, 26, 255, 0.6) -7px -7px, rgba(178, 26, 255, 0.5) -8px -8px,
+					rgba(178, 26, 255, 0.4) -9px -9px, rgba(178, 26, 255, 0.3) -10px -10px,
+					rgba(178, 26, 255, 0.2) -11px -11px,
+					rgba(178, 26, 255, 0.1) -12px -12px;
+			}
+		}
+	}
+	.smallIndicator {
+		font-family: "Orbitron", sans-serif;
 
-    cursor: pointer;
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-    margin-top: auto;
-    color: $phase5;
-    display: block;
-    img {
-      display: block;
-      margin: 0.5rem auto 1.5rem;
-      width: 2rem;
-      filter: $svgpearlescent;
-    }
-    &:hover {
-      filter: $svgpurps;
-    }
-  }
+		cursor: pointer;
+		font-size: 1.4rem;
+		margin-bottom: 1.5rem;
+		margin-top: auto;
+		color: $phase5;
+		display: block;
+		img {
+			display: block;
+			margin: 0.5rem auto 1.5rem;
+			width: 2rem;
+			filter: $svgpearlescent;
+		}
+		&:hover {
+			filter: $svgpurps;
+		}
+	}
 }
 
 // End of Hero
 // Start of About Me
 .aboutme {
-  padding: 2rem 1rem;
-  .content {
-    h2 {
-      color: $pearlescent;
-      font-size: 2rem;
-    }
-    .part {
-      padding-left: 0.5rem;
-      h3 {
-        color: $purps;
-        padding: 1.5rem 0 0.5rem;
-        font-size: 1.6rem;
-      }
-      p {
-        line-height: 1.2;
-      }
-      .skillsList {
-        img {
-          display: none;
-        }
-      }
-    }
-  }
+	padding: 2rem 1rem;
+	.content {
+		h2 {
+			color: $pearlescent;
+			font-size: 2rem;
+		}
+		.part {
+			padding-left: 0.5rem;
+			h3 {
+				color: $purps;
+				padding: 1.5rem 0 0.5rem;
+				font-size: 1.6rem;
+			}
+			p {
+				line-height: 1.2;
+			}
+			.skillsList {
+				img {
+					display: none;
+				}
+			}
+		}
+	}
 }
 //End of About Me
 // Start of Projects
 .projects {
-  padding: 2rem;
-  .content {
-    h2 {
-      color: $pearlescent;
-      padding-bottom: 1rem;
-      font-size: 2rem;
-    }
-    .project {
-      border: 3px solid $purps;
-      border-radius: 3px;
-      height: 16rem;
-      max-width: 20rem;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 1rem;
+	padding: 2rem;
+	.content {
+		h2 {
+			color: $pearlescent;
+			padding-bottom: 1rem;
+			font-size: 2rem;
+		}
+		.projectList {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			.project {
+				border: 3px solid $purps;
+				border-radius: 3px;
+				height: 16rem;
+				width: 20rem;
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 1rem;
 
-      .projectDesc {
-        padding: 0 1rem;
-      }
-      h3 {
-        color: $purps;
-        padding: 1.5rem 0;
-        font-size: 1.6rem;
-      }
-      p {
-        line-height: 1.2;
-      }
-      .LogosContainer {
-        display: flex;
-        align-items: center;
-        margin-top: 2rem;
-        position: relative;
-        margin-top: auto;
-        img {
-          width: 2rem;
-          margin: 0 0.5rem;
-        }
-        .githubLogo {
-          margin: 0 1rem 0.3rem auto;
-          width: 2.5rem;
-        }
-        .techLogos {
-          -webkit-clip-path: polygon(0 0, 65% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
-          padding: 0.6rem 0.5rem 0;
-          padding-right: 2rem;
-          background: $purps;
-          display: inline-block;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-        }
-      }
-    }
-  }
+				.projectDesc {
+					padding: 0 1rem;
+				}
+				h3 {
+					color: $purps;
+					padding: 1.5rem 0;
+					font-size: 1.6rem;
+				}
+				p {
+					line-height: 1.2;
+				}
+				.LogosContainer {
+					display: flex;
+					align-items: center;
+					margin-top: 2rem;
+					position: relative;
+					margin-top: auto;
+					img {
+						width: 2rem;
+						margin: 0 0.5rem;
+					}
+					.githubLogo {
+						margin: 0 1rem 0.3rem auto;
+						width: 2.5rem;
+					}
+					.techLogos {
+						-webkit-clip-path: polygon(0 0, 65% 0, 100% 100%, 0 100%);
+						clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+						padding: 0.6rem 0.5rem 0;
+						padding-right: 2rem;
+						background: $purps;
+						display: inline-block;
+						position: absolute;
+						left: 0;
+						bottom: 0;
+					}
+				}
+			}
+		}
+	}
 }
 // End of projects
 // start of Footer
 .footer {
-  background: $phase3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 8vh;
+	background: $phase3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 8vh;
 }
 
 // media queries
 
-@media screen and (min-width: $screenbreak720) {
-  .content {
-    text-align: left;
-    padding: 0 5rem;
-  }
-  .hero {
-    .actionButtons {
-      text-align: center;
-      width: 40%;
-      justify-content: space-between;
-    }
-  }
+@media screen and (min-width: $screenbreak900) {
+	.content {
+		text-align: left;
+		padding: 0 5rem;
+	}
+	.hero {
+		.actionButtons {
+			text-align: center;
+			width: 40%;
+			justify-content: space-between;
+		}
+	}
 
-  .aboutme {
-    .content {
-      display: grid;
-      gap: 1rem;
-      grid-template-areas:
-        "heading heading"
-        "about exp"
-        "skills skills";
-      .item1 {
-        grid-area: heading;
-      }
-      .item2 {
-        grid-area: about;
-      }
+	.aboutme {
+		.content {
+			display: grid;
+			gap: 1rem;
+			grid-template-areas:
+				"heading heading"
+				"about exp"
+				"skills skills";
+			.item1 {
+				grid-area: heading;
+			}
+			.item2 {
+				grid-area: about;
+			}
 
-      .item3 {
-        grid-area: exp;
-      }
-      .item4 {
-        grid-area: skills;
-      }
-      h2 {
-        font-size: 3rem;
-      }
-      .part {
-        p,
-        ul {
-          margin-left: 0.5rem;
-        }
+			.item3 {
+				grid-area: exp;
+			}
+			.item4 {
+				grid-area: skills;
+			}
+			h2 {
+				font-size: 3rem;
+			}
+			.part {
+				p,
+				ul {
+					margin-left: 0.5rem;
+				}
 
-        .skillsList {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 5rem;
-          li {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+				.skillsList {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 5rem;
+					li {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
 
-            img {
-              padding-top: 0.5rem;
-              display: inline-block;
-              width: 65px;
-            }
-          }
-        }
+						img {
+							padding-top: 0.5rem;
+							display: inline-block;
+							width: 65px;
+						}
+					}
+				}
 
-        h3 {
-          padding: 1.5rem 0 0.5rem;
-          font-size: 2.5rem;
-        }
-        p {
-          font-size: 1.15rem;
-        }
-      }
-    }
-  }
-  .projects {
-    .content {
-      h2 {
-        font-size: 3rem;
-      }
-      .projectList {
-        margin-top: 1.5rem;
-        margin-left: 0.5rem;
-        display: flex;
-        gap: 1.5rem;
-      }
-    }
-  }
+				h3 {
+					padding: 1.5rem 0 0.5rem;
+					font-size: 2.5rem;
+				}
+				p {
+					font-size: 1.15rem;
+				}
+			}
+		}
+	}
+	.projects {
+		.content {
+			h2 {
+				font-size: 3rem;
+			}
+			.projectList {
+				margin-top: 1.5rem;
+				margin-left: 0.5rem;
+			}
+		}
+	}
 }
-@media screen and (min-width: $screenbreak1080) {
-  .hero {
-    .container {
-      .content {
-        .logo {
-          h1 {
-            font-size: 10rem;
+@media screen and (min-width: $screenbreak1800) {
+	.hero {
+		.container {
+			.content {
+				.logo {
+					h1 {
+						font-size: 10rem;
 
-            &:before,
-            &:after {
-              font-size: 15rem;
-            }
-          }
-          .firstLetter {
-            font-size: 12rem;
-          }
-        }
-        p {
-          font-size: 2rem;
-        }
-      }
-      .btn {
-        font-size: 2rem;
-        max-width: 20rem;
-      }
-    }
-  }
-  .aboutme {
-    .content {
-      h2 {
-        font-size: 5.5rem;
-      }
-      .part {
-        margin-left: 1rem;
-        h3 {
-          padding: 1.5rem 0 0.5rem;
-          font-size: 4rem;
-        }
-        p {
-          font-size: 1.3rem;
-        }
-      }
-    }
-  }
-  .projects {
-    .content {
-      h2 {
-        font-size: 5.5rem;
-      }
-    }
-  }
+						&:before,
+						&:after {
+							font-size: 15rem;
+						}
+					}
+					.firstLetter {
+						font-size: 12rem;
+					}
+				}
+				p {
+					font-size: 2rem;
+				}
+			}
+			.btn {
+				font-size: 2rem;
+				max-width: 20rem;
+			}
+		}
+	}
+	.aboutme {
+		.content {
+			h2 {
+				font-size: 5.5rem;
+			}
+			.part {
+				margin-left: 1rem;
+				h3 {
+					padding: 1.5rem 0 0.5rem;
+					font-size: 4rem;
+				}
+				p {
+					font-size: 1.3rem;
+				}
+			}
+		}
+	}
+	.projects {
+		.content {
+			h2 {
+				font-size: 5.5rem;
+			}
+		}
+	}
 }
-@media screen and (min-width: $screenbreak1440) {
-  .hero {
-    .content {
-      margin-left: 0;
-    }
-    .btn {
-      margin-top: 6rem;
-    }
-  }
-  .aboutme {
-    .content {
-      .part {
-        p {
-          font-size: 1.5rem;
-        }
-      }
-    }
-  }
+@media screen and (min-width: $screenbreak2400) {
+	.hero {
+		.content {
+			margin-left: 0;
+		}
+		.btn {
+			margin-top: 6rem;
+		}
+	}
+	.aboutme {
+		.content {
+			.part {
+				p {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
 }
