@@ -30,6 +30,7 @@ export default function Projects() {
 								<a
 									className="githubLogo"
 									href="https://github.com/NTWayys/chromExt"
+									target="_blank"
 								>
 									<img src={GithubLogo} />
 								</a>
@@ -52,6 +53,7 @@ export default function Projects() {
 								<a
 									className="githubLogo"
 									href="https://github.com/NTWayys/porterRobinsonTributePage"
+									target="_blank"
 								>
 									<img src={GithubLogo} />
 								</a>
