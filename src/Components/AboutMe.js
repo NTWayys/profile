@@ -18,7 +18,7 @@ export default function AboutMe() {
 			<div className="aboutme">
 				<div className="container">
 					<div className="content">
-						<h2 className="item1">About Me</h2>
+						<h2 className="item1">ABOUT ME</h2>
 						<div className="part item2">
 							<h3>Myself</h3>
 							<p>

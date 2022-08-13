@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import HTMLLogo from "../images/icons/html-5-logo.svg";
 import JSLogo from "../images/icons/js-logo.svg";
@@ -8,10 +8,10 @@ import ReactLogo from "../images/icons/react-logo.svg";
 
 export default function Projects() {
 	return (
-		<section className="projects">
+		<section id="projects" className="projects">
 			<div className="container">
 				<div className="content">
-					<h2>Projects preview</h2>
+					<h2>PROJECTS</h2>
 					<div className="projectList">
 						<div className="project">
 							<div className="projectDesc">

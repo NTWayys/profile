@@ -14,21 +14,17 @@ export default function Navbar() {
 						<span className="firstLetter">W</span>ayys
 					</a>
 				</div>
-				<div className={!isWide && "dropDown"}>
+				<div className={isWide ? undefined : "dropDown"}>
 					{!isWide && <h4>Menu</h4>}
-					<ul
-						className={`
-            ${!isWide ? "dropItems" : "navItems"} 
-          `}
-					>
+					<ul className={`${!isWide ? "dropItems" : "navItems"} `}>
 						<li>
 							<a href="#about-me">About Me</a>
 						</li>
 						<li>
-							<a href="#">Projects</a>
+							<a href="#projects">Projects</a>
 						</li>
 						<li>
-							<a href="#">Contacts</a>
+							<a href="#contacts">Contacts</a>
 						</li>
 					</ul>
 				</div>
